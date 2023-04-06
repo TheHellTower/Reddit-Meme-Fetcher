@@ -20,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/TheHellTower/Reddit-Meme-Fetcher/issues"
   },
-  "homepage": "https://github.com/TheHellTower/Reddit-Meme-Fetcher#readme",
-  "dependencies": {
-    "reddit-meme-fetcher": "file:reddit-meme-fetcher-1.0.0.tgz"
-  }
+  "homepage": "https://github.com/TheHellTower/Reddit-Meme-Fetcher#readme"
 }
