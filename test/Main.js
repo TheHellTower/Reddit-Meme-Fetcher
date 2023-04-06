@@ -1,4 +1,4 @@
-const RedditMemesFetcherClient = new (require("../src/RedditMemesFetcher.js"))("json");
+const RedditMemesFetcherClient = new (require("reddit-meme-fetcher"))("json");
 
 
 //Example JSON output:
