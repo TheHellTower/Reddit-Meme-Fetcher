@@ -4,12 +4,11 @@ module.exports = class RedditMemesFetcher {
     #API = `443:www.reddit.com:/r/{{Sub}}.json?sort=top&t=week`;
     #REPO = "https://github.com/TheHellTower/Reddit-Meme-Fetcher"
     #SUB = ["Memes", "Dankmemes", "HistoryMemes"];
-    #Format = "";
-    //sub = sub[parseInt(Math.random() * (#sub.length - 0) + 0)];
-
+    #Format = ""; //ToDO: Add Format Support
+    
     /**
      * @constructor
-     * @param {string} Format json || description => (default: json = full data on the post.)
+     * @param {string} Format json || description => (default: json = full data on the post.) (not implemented yet)
      */
     constructor(Format = "json") {
         this.#Format = Format;
@@ -20,7 +19,6 @@ module.exports = class RedditMemesFetcher {
      * @param {true} ageGate true || false => (default: true = filter +18 content)
      * @returns {Promise<boolean>}
      */
-
     getRandomMeme(ageGate = true) {
         return new Promise(async (resolve, reject) => {
             var splitted = this.#API.split(':'),
@@ -35,21 +33,6 @@ module.exports = class RedditMemesFetcher {
 
                 res.on("data", body => {
                     jsonData += body.toString();
-                    /*var response = JSON.parse(body.toString());
-
-                    return resolve(res.statusCode == 200 ?
-                        (Format === "text" ?
-                            response["text"] :
-                            {
-                                text: response["text"],
-                                source: response["source"],
-                                source_url: response["source_url"],
-                                language: response["language"],
-                                permalink: response["permalink"]
-                            }
-                        ) : 
-                        "{}"
-                    );*/
                 })
                 .on("error", e => reject(e))
                 .on("end", x => {
@@ -101,8 +84,5 @@ module.exports = class RedditMemesFetcher {
             req.write(this.#REPO);
             req.end();
         });
-    }
-
-
-    
+    }   
 }
