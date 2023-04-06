@@ -8,7 +8,7 @@
 `npm install --save reddit-meme-fetcher`
 
 # Preview
-![Front Page](https://i.imgur.com/jDmtbyT.gif)
+[![](https://i.imgur.com/jDmtbyT.gif)](https://youtu.be/2ZtPQcKcdo0)
 
 # Stargazers
 [![Stargazers repo roster for @TheHellTower/Reddit-Meme-Fetcher](https://reporoster.com/stars/dark/notext/TheHellTower/Reddit-Meme-Fetcher)](https://github.com/TheHellTower/Reddit-Meme-Fetcher/stargazers)
