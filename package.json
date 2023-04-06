@@ -2,7 +2,7 @@
   "name": "reddit-meme-fetcher",
   "version": "1.0.0",
   "description": "Follow the fast-paced world of Silicon Valley as rival tech CEOs navigate cutthroat competition, ambitious innovation, and personal drama in their quest for global dominance.",
-  "main": "src/Main.js",
+  "main": "src/RedditMemesFetcher.js",
   "scripts": {
     "test": "node test/Main.js"
   },
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/TheHellTower/Reddit-Meme-Fetcher/issues"
   },
-  "homepage": "https://github.com/TheHellTower/Reddit-Meme-Fetcher#readme"
+  "homepage": "https://github.com/TheHellTower/Reddit-Meme-Fetcher#readme",
+  "dependencies": {
+    "reddit-meme-fetcher": "file:reddit-meme-fetcher-1.0.0.tgz"
+  }
 }
