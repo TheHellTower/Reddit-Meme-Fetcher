@@ -1,0 +1,24 @@
+{
+  "name": "reddit-meme-fetcher",
+  "version": "1.0.0",
+  "description": "Follow the fast-paced world of Silicon Valley as rival tech CEOs navigate cutthroat competition, ambitious innovation, and personal drama in their quest for global dominance.",
+  "main": "src/Main.js",
+  "scripts": {
+    "test": "node test/Main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheHellTower/Reddit-Meme-Fetcher.git"
+  },
+  "keywords": [
+    "reddit",
+    "memes",
+    "fetcher"
+  ],
+  "author": "TheHellTower",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheHellTower/Reddit-Meme-Fetcher/issues"
+  },
+  "homepage": "https://github.com/TheHellTower/Reddit-Meme-Fetcher#readme"
+}
