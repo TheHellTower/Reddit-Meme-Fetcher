@@ -45,5 +45,5 @@ const RedditMemesFetcherClient = new (require("reddit-meme-fetcher"))("json");
 */
 
 RedditMemesFetcherClient.getRandomMeme("json").then(res => {
-  console.log(res); //Json
+  console.log(res["data"]);
 })
