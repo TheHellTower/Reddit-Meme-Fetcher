@@ -2,6 +2,11 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/thehelltower/reddit-meme-fetcher/badge)](https://www.codefactor.io/repository/github/thehelltower/reddit-meme-fetcher)
 
+## Installation
+
+[![npm package](https://nodei.co/npm/reddit-meme-fetcher.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/reddit-meme-fetcher)<br>
+`npm install --save reddit-meme-fetcher`
+
 # Preview
 ![Front Page](https://i.imgur.com/jDmtbyT.gif)
 
