@@ -27,7 +27,10 @@ module.exports = class RedditMemesFetcher {
                 host: splitted[1],
                 port: splitted[0],
                 path: splitted[2].replace("{{Sub}}", randomSub),
-                method: "GET"
+                method: "GET",
+                headers: {
+                    "User-Agent": this.#REPO
+                }
             }, res => {
                 var jsonData = "";
 
