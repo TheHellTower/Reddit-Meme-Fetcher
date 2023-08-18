@@ -58,26 +58,34 @@ module.exports = class RedditMemesFetcher {
                                 isPremium: randomMeme.data.author_premium
                             },
                             post: {
-                                title: randomMeme.data.title,
+                                comments: randomMeme.data.num_comments,
+                                edited: randomMeme.data.edited,
                                 imageURL: {
                                     url: randomMeme.data.url,
                                     urlOverriden: randomMeme.data.url_overridden_by_dest
                                 },
-                                thumbnail: randomMeme.data.thumbnail,
+                                score: randomMeme.data.score,
+                                thumbnail: {
+                                    url: randomMeme.data.thumbnail,
+                                    height: randomMeme.data.thumbnail_height,
+                                    width: randomMeme.data.thumbnail_width,
+                                },
+                                title: randomMeme.data.title,
                                 votes: {
                                     up: randomMeme.data.ups,
                                     upRatio: randomMeme.data.upvote_ratio,
                                     Down: randomMeme.data.downs
                                 },
-                                score: randomMeme.data.score,
-                                comments: randomMeme.data.num_comments,
-                                viewCount: randomMeme.data.view_count ?? 0,
                                 permaLink: `https://${splitted[1]}${randomMeme.data.permalink}`,
                                 extra: {
                                     archived: randomMeme.data.archived,
-                                    pinned: randomMeme.data.pinned,
+                                    created: randomMeme.data.created,
+                                    createdAsDate: new Date(randomMeme.data.created * 1000),
+                                    isVideo: randomMeme.data.is_video,
+                                    media_only: randomMeme.data.media_only,
                                     over18: randomMeme.data.over_18,
-                                    createdUTC: randomMeme.data.created_utc
+                                    pinned: randomMeme.data.pinned,
+                                    spoiler: randomMeme.data.spoiler
                                 }
                             }
                         }

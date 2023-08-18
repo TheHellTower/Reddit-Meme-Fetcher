@@ -1,6 +1,6 @@
 {
   "name": "reddit-meme-fetcher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Follow the fast-paced world of Silicon Valley as rival tech CEOs navigate cutthroat competition, ambitious innovation, and personal drama in their quest for global dominance.",
   "main": "src/RedditMemesFetcher.js",
   "scripts": {
