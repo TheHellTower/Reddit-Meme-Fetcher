@@ -40,6 +40,7 @@ module.exports = class RedditMemesFetcher {
                 .on("error", e => reject(e))
                 .on("end", x => {
                     jsonData = JSON.parse(jsonData);
+                    if(jsonData.error) return resolve({ error: true, data: { code: jsonData.error, message: jsonData.message } });
                     const allowed = ageGate ? jsonData["data"]["children"].filter((post) => !post.data.over_18) : jsonData["data"]["children"];
                     if (!allowed.length) return reject({error: true, message: `There are no fresh \`${randomSub}\` memes try again !`});
                     const randomMeme = allowed[Math.floor(Math.random() * allowed.length)];
