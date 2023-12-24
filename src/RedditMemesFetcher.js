@@ -4,14 +4,14 @@ module.exports = class RedditMemesFetcher {
     #API = `443:www.reddit.com:/r/{{Sub}}.json?sort=top&t=week`;
     #REPO = "https://github.com/TheHellTower/Reddit-Meme-Fetcher"
     #SUB = ["Memes", "Dankmemes", "HistoryMemes"];
-    #Format = ""; //ToDO: Add Format Support
+    #Authorization = "";
     
     /**
      * @constructor
-     * @param {string} Format json || description => (default: json = full data on the post.) (not implemented yet)
+     * @param {string} Authorization (no idea for the full implementation if any required.
      */
-    constructor(Format = "json") {
-        this.#Format = Format;
+    constructor(Authorization = "") {
+        this.#Authorization = Authorization;
     }
 
     /**
@@ -29,7 +29,8 @@ module.exports = class RedditMemesFetcher {
                 path: splitted[2].replace("{{Sub}}", randomSub),
                 method: "GET",
                 headers: {
-                    "User-Agent": this.#REPO
+                    "User-Agent": this.#REPO,
+                    "Authorization": this.#Authorization
                 }
             }, res => {
                 var jsonData = "";
